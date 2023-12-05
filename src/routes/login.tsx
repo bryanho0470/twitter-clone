@@ -3,6 +3,7 @@ import { auth } from "../firebase";
 import { useState } from "react";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { FirebaseError } from "firebase/app";
+import GithubButton from "../components/github-button";
 import {
   Form,
   Wrapper,
@@ -72,6 +73,7 @@ export default function CreateAccount() {
         Don't have an account ?{" "}
         <Link to="/create-account">Create on &rarr;</Link>
       </Switcher>
+      <GithubButton />
     </Wrapper>
   );
 }
