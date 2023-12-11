@@ -95,7 +95,7 @@ export default function PostTweetForm() {
           `tweets/${user.uid}-${user.displayName}/${doc.id}`
         );
         const result = await uploadBytes(locationRef, file);
-        const url = getDownloadURL(result.ref);
+        const url = await getDownloadURL(result.ref);
         await updateDoc(doc, {
           photo: url,
         });
@@ -112,6 +112,7 @@ export default function PostTweetForm() {
   return (
     <Form onSubmit={onSubmit}>
       <TextArea
+        required
         rows={5}
         maxLength={180}
         onChange={onChange}
