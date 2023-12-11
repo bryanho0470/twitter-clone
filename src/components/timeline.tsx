@@ -1,6 +1,7 @@
 import {
   collection,
   getDocs,
+  limit,
   onSnapshot,
   orderBy,
   query,
@@ -30,7 +31,8 @@ export default function Timeline() {
     const fetchTweets = async () => {
       const tweetsQuery = query(
         collection(db, "tweets"),
-        orderBy("createdAt", "desc")
+        orderBy("createdAt", "desc"),
+        limit(25)
       );
       // const spanshot = await getDocs(tweetsQuery);
       // const tweets = spanshot.docs.map((doc) => {
