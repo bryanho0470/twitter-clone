@@ -1,12 +1,12 @@
 import styled from "styled-components";
-import { Itweet } from "./timeline";
+import { ITweet } from "./timeline";
 
 const Wrapper = styled.div`
-  display: grind;
+  display: grid;
   grid-template-columns: 3fr 1fr;
-  border: 1px solid rgbs(255,255,255,0.5);
-  border-radius: 15px;'
-
+  padding: 20px;
+  border: 1px solid rgbs(255, 255, 255, 0.5);
+  border-radius: 15px;
 `;
 
 const Column = styled.div``;
@@ -27,7 +27,7 @@ const Payload = styled.p`
   font-size: 15px;
 `;
 
-export default function Tweet({ username, photo, tweet }: Itweet) {
+export default function Tweet({ username, photo, tweet }: ITweet) {
   return (
     <Wrapper>
       <Column>
@@ -39,7 +39,6 @@ export default function Tweet({ username, photo, tweet }: Itweet) {
           <Photo src={photo} />
         </Column>
       ) : null}
-      ;
     </Wrapper>
   );
 }

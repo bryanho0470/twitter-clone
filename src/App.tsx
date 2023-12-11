@@ -44,6 +44,7 @@ body {
   color:white;
   font-family: system-ui, -apple-system, BlinkmacSystemfont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;}
 }
+
 `;
 
 const Wrapper = styled.div`
