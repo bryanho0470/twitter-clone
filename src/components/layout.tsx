@@ -5,9 +5,9 @@ import { auth } from "../firebase";
 const Wrapper = styled.div`
   display: grid;
   gap: 20px;
-  grid-templete-column: 1fr 4fr;
-  padding: 50px, 0px;
-  height: 100;
+  grid-template-columns: 1fr 4fr;
+  height: 100%;
+  padding: 50px 0px;
   width: 100%;
   max-width: 860px;
 `;

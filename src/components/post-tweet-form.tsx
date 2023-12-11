@@ -20,11 +20,13 @@ const TextArea = styled.textarea`
   width: 100%;
   resize: none;
   &::placeholder {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
     font-size: 16px;
-    font-family: system-ui, -apple-system, BlinkmacSystemfont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;};
   }
   &:focus {
-    outline:none;
+    outline: none;
     border-color: #1d9bf0;
   }
 `;
@@ -48,13 +50,13 @@ const SubmitBtn = styled.input`
   background-color: #1d9bf0;
   color: white;
   border: none;
-  padding: 10px 8px;
+  padding: 10px 0px;
   border-radius: 20px;
   font-size: 16px;
   cursor: pointer;
   &:hover,
-  $:active {
-    opacity: 0.8;
+  &:active {
+    opacity: 0.9;
   }
 `;
 
@@ -62,7 +64,7 @@ export default function PostTweetForm() {
   const [isLoading, setLoading] = useState(false);
   const [tweet, setTweet] = useState("");
   const [file, setFile] = useState<File | null>(null);
-  const onChange = () => (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+  const onChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     setTweet(e.target.value);
   };
 
@@ -117,7 +119,7 @@ export default function PostTweetForm() {
         placeholder="What is happening??"
       />
       <AttachFileButton htmlFor="file">
-        {file ? "Photo added " : "Add photo"}
+        {file ? "Photo added 🙈" : "Add photo"}
       </AttachFileButton>
       <AttachFileInput
         onChange={onFileChange}
